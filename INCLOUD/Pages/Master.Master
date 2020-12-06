@@ -1,0 +1,68 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Master.master.cs" Inherits="INCLOUD.Pages.Master" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <link rel="stylesheet" href="CSS/Menu.css" />
+    <link rel="stylesheet" href="CSS/Body and Images.css" />
+    <link href="https://fonts.googleapis.com/css?family=K2D" rel="stylesheet" />
+    <script type="text/javascript" src="JavaScript/Rate.js"></script>
+    <title>IN Cloud</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body onload="Clock()">
+    <ul>
+        <li class="menu">Menu:</li>
+        <li><a href="HomePage.aspx" class="navbar">Home Page</a></li>
+        <li><a href="Services.aspx" class="navbar">Services</a></li>
+        <%
+            if (Session["email"] != null)
+            {
+                Response.Write("<li><a href='StoragePage.aspx' class='navbar'>Storage</a></li>");
+                if ((bool)(Session["isAdmin"]))
+                    Response.Write("<li><a href='AdminData.aspx' class='navbar'>Admin-Data</a></li>");
+            }
+            else
+                Response.Write("<li><a href='SignIn.aspx' class='navbar'>Sign-In</a></li>");
+        %>
+        <li><a href="About.aspx" class="navbar">About</a></li>
+        <li><a href="Links.aspx" class="navbar">Links</a></li>
+
+    </ul>
+    <a href="#top" class="upBtn" title="Go to top" style="text-decoration: none; font-size: 125%; right: 30px;">⤒</a>
+    <%
+        if (Session["email"] != null)
+        {
+            Response.Write("<a href='UserDetails.aspx' class='upBtn' title='Edit User Details' style='text-decoration: none; left: 130px; width: auto;'>UserDetails</a>");
+Response.Write("<form runat='server' onsubmit='return true' method='post'>"
++ "<input style = 'left: 20px; width: auto;' class='upBtn' type='submit' name='signout' value='Sign-Out'/>"
++ "</form>");
+            if (Application[Session["email"].ToString()] == null)
+            {
+                Response.Write("<div class='starsRate'>"
+        + "<form onsubmit='return true' method='post'>"
+            + "<div class='rating'>"
+                + "<input id='star5' name='star' type='radio' value='5' class='radio-btn hide' />"
+                + "<label for='star5' style='font-size:30px'>★</label>"
+                + "<input id='star4' name='star' type='radio' value='4' class='radio-btn hide' />"
+                + "<label for='star4' style='font-size:30px'>★</label>"
+                + "<input id='star3' name='star' type='radio' value='3' class='radio-btn hide' />"
+                + "<label for='star3' style='font-size:30px'>★</label>"
+                + "<input id='star2' name='star' type='radio' value='2' class='radio-btn hide' />"
+                + "<label for='star2' style='font-size:30px'>★</label>"
+                + "<input id='star1' name='star' type='radio' value='1' class='radio-btn hide' />"
+                + "<label for='star1' style='font-size:30px'>★</label>"
+                + "<div class='clear'></div>"
+            + "</div>"
+        + "<input style = 'width: 200px; bottom: 10px; left: 0; right: 0; margin-left: auto; margin-right: auto;' class='upBtn' type='submit' name='starrate' value='Rate' />"
+        + "</form>"
+    + "</div>");
+            }
+        };
+    %>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

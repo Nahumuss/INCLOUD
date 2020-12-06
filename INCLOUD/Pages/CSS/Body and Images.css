@@ -1,0 +1,218 @@
+﻿body {
+    margin: 0;
+    background: url('Images/BackroundImages/MainPageImage.jpg');
+    background-size: 100% 150%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-family: 'K2D', sans-serif;
+    -ms-overflow-style: none;
+}
+
+h1 {
+    text-shadow: 1px 1px #51635e;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+h2 {
+    text-shadow: 1px 1px #51635e;
+    font-size: 45px;
+    text-decoration: underline;
+}
+
+h3 {
+    text-shadow: 1px 1px #51635e;
+    font-size: 30px;
+    margin: 10px;
+}
+
+p {
+    text-shadow: 1px 1px #51635e;
+    font-size: 25px;
+}
+
+.link {
+    text-decoration: none;
+    color: #436549;
+    margin-top: 0;
+}
+
+.button {
+    background-color: #000000;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 70px;
+    cursor: pointer;
+    border: solid #000000 10px;
+    border-radius: 10px;
+    box-shadow: #313131 3px 3px
+}
+
+.big {
+    font-size: 150px;
+}
+
+.form {
+    font-size: 50px;
+    margin: 0;
+}
+
+.input {
+    margin: 0;
+    height: 35px;
+    font-size: 20px;
+    padding: 10px 18px;
+    border-radius: 12px;
+    text-shadow: 1px 1px white;
+}
+
+    .input::-webkit-input-placeholder {
+        font-size: 18px;
+    }
+
+    .input:-ms-input-placeholder {
+        font-size: 18px;
+    }
+
+    .input:-moz-placeholder {
+        font-size: 18px;
+    }
+
+    .input::-moz-placeholder {
+        font-size: 18px;
+    }
+
+.radio {
+    margin: 20px;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+}
+
+.icon {
+    height: 100px;
+    width: 100px;
+}
+
+.div {
+    text-align: center;
+    padding: 50px 16px;
+    height: 800px;
+}
+
+.p {
+    text-shadow: 1px 1px white;
+    font-size: 70px;
+    margin: 0;
+}
+
+.table {
+    border: 0;
+    padding: 15px 150px;
+    width: 1300px;
+    height: 300px;
+    color: #306363;
+    font-size: 25px;
+    text-shadow: 1px 1px black;
+}
+
+.upBtn {
+    position: fixed;
+    bottom: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #306363;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    width: 30px;
+    text-align: center
+}
+
+    .upBtn:hover {
+        background-color: #233c3c;
+    }
+
+.clock {
+    position: fixed;
+    top: 20px;
+    right: 30px;
+    z-index: 99;
+    background-color: #306363;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+    text-align: center
+}
+
+    .clock:hover {
+        background-color: #233c3c;
+    }
+
+.serviestext {
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 0;
+}
+
+.hide {
+    display: none;
+}
+
+.clear {
+    float: none;
+    clear: both;
+}
+
+.rating {
+    width: 165px;
+    unicode-bidi: bidi-override;
+    direction: rtl;
+    text-align: center;
+    position: fixed;
+}
+
+    .rating > label {
+        float: right;
+        padding: 0;
+        position: relative;
+        width: 1.1em;
+        cursor: pointer;
+        color: #000;
+    }
+
+        .rating > label:hover,
+        .rating > label:hover ~ label,
+        .rating > input.radio-btn:checked ~ label {
+            color: transparent;
+        }
+
+            .rating > label:hover:before,
+            .rating > label:hover ~ label:before,
+            .rating > input.radio-btn:checked ~ label:before,
+            .rating > input.radio-btn:checked ~ label:before {
+                content: "\2605";
+                position: absolute;
+                left: 0;
+                color: #FFD700;
+            }
+
+.starsRate {
+    text-align: center;
+    height: 50px;
+    width: 170px;
+    bottom: 50px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}

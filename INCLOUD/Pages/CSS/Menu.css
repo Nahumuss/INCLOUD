@@ -1,0 +1,66 @@
+﻿ul:hover {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    height: 100%;
+    overflow: hidden;
+}
+ul {
+    z-index: 100;
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    height: 70.4px;
+    flex-direction: column;
+    overflow: hidden;
+    transition: .5s;
+}
+
+
+.navbar {
+    margin: 0;
+    font-size: 40px;
+    color: white;
+    display: block;
+    width: 250px;
+    height: 133px;
+    background-color: #1e1e1e;
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.navbar:hover {
+   background-color: #000000;
+}
+.menu {
+    margin: 0;
+    font-size: 40px;
+    color: white;
+    display: block;
+    width: 250px;
+    background-color: #3a9277;
+    text-align: center;
+    padding: 8px 16px;
+    border: 1px solid #000000;
+    text-decoration: none;
+    flex: 1 1 0;
+}
+.menu:hover {
+    background-color: #1a3e33;
+}
+.chosen {
+    margin: 0;
+    font-size: 40px;
+    color: white;
+    display: block;
+    width: 250px;
+    height: 167px;
+    background-color: #53a5a0;
+    text-align: center;
+    padding: 8px 16px;
+    text-decoration: none;
+    font-weight: bold;
+}
